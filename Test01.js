@@ -69,28 +69,60 @@ var comienzaCon9 = empiezaConNueve(90007);
 console.log(comienzaCon9);*/
 
 
-function breakStatement(num) {
-   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
-   // Guardar cada nuevo valor en un arreglo y retornarlo.
-   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
-   // la ejecución y retornar el string: "Se interrumpió la ejecución".
-   // [PISTA]: utiliza el statement 'break'.
-   // Tu código:
-   // var suma = 0;
-   var arraySuma = [];
-   var interrupcion = false;
-   for (var i = 0; i < 10; i++) {
-      num += 2;
-      arraySuma.push(num);
-      if (num === 10) {
-         interrupcion = true;
-         break;
-      }
-   }
-   if (interrupcion) return arraySuma + ' Se interrumpió la ejecución';
-   else return arraySuma;
+// function breakStatement(num) {
+//    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+//    // Guardar cada nuevo valor en un arreglo y retornarlo.
+//    // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
+//    // la ejecución y retornar el string: "Se interrumpió la ejecución".
+//    // [PISTA]: utiliza el statement 'break'.
+//    // Tu código:
+//    // var suma = 0;
+//    var arraySuma = [];
+//    var interrupcion = false;
+//    for (var i = 0; i < 10; i++) {
+//       num += 2;
+//       arraySuma.push(num);
+//       if (num === 10) {
+//          interrupcion = true;
+//          break;
+//       }
+//    }
+//    if (interrupcion) return arraySuma + ' Se interrumpió la ejecución';
+//    else return arraySuma;
+// }
+
+// var result = breakStatement(-6);
+
+// console.log(result);
+
+// ============================================================= //
+
+// split, join...
+// var palabra = 'Henri';
+// var palabraSeparada = palabra.split('');     // 'split' convierte un string en
+//                                                         // en un arreglo, donde cada elemento 
+//                                                         // contendrá un sub-string, dependiendo 
+//                                                         // del parámetro divisor que indiquemos.
+
+// console.log(palabraSeparada);
+
+// palabraSeparada.pop();
+// palabraSeparada.push('y');
+// console.log(palabraSeparada);
+
+// var palabraArreglada = palabraSeparada.join('');     // 'join', realiza lo contrario
+//                                                                                  // de 'split'...
+// console.log(palabraArreglada);
+
+let nombreDerecho = 'Manuel';
+let nombreSeparado = nombreDerecho.split('');
+console.log(nombreDerecho + ' => ' + nombreSeparado);
+
+let nombreAlRevesSep = [];
+for (let i = nombreSeparado.length - 1; i >= 0; i--) {
+   nombreAlRevesSep.push(nombreSeparado[i]);
 }
 
-var result = breakStatement(-6);
-
-console.log(result);
+// console.log(nombreAlRevesSep);
+let nombreAlRevesUnido = nombreAlRevesSep.join('');
+console.log(nombreAlRevesUnido);

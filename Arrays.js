@@ -58,7 +58,7 @@
 //                                                         // contendrá un sub-string, dependiendo 
 //                                                         // del parámetro divisor que indiquemos.
 
-// // console.log(palabraSeparada);
+// console.log(palabraSeparada);
 
 // palabraSeparada.pop();
 // palabraSeparada.push('y');
